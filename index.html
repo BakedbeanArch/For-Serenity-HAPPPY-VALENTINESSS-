@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Valentine's Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="starfield"></div>
+    <audio id="bg-music" loop src="audio/bg-music.mp3"></audio>
+
+    <!-- 1. INTRO SCENE -->
+    <section id="intro-scene" class="scene active">
+        <div id="pixar-star" class="star-hero"></div>
+        <div id="intro-ui" class="hidden">
+            <h1 class="cinematic-title">For My Love</h1>
+            <p class="cinematic-subtitle">A journey written in the stars</p>
+            <div class="button-group">
+                <button id="begin-btn" class="glow-button">Begin</button>
+                <button id="continue-btn" class="glow-button hidden">Continue Journey</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. ALBUM SCENE -->
+    <section id="album-scene" class="scene">
+        <div class="album-container">
+            <header class="album-header">
+                <div id="progress-letters" class="constellation-bar"></div>
+            </header>
+            <div class="photo-grid" id="photo-grid"></div>
+            <div class="album-footer">
+                <button id="restart-btn" class="text-link">Restart Journey</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. LIGHTBOX -->
+    <div id="lightbox" class="hidden">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-window">
+            <span class="close-lightbox">&times;</span>
+            <div class="media-container">
+                <img id="lightbox-img" src="" alt="Memory">
+                <div class="ui-overlay">
+                    <p id="lightbox-caption" class="serif"></p>
+                    <div class="audio-status">
+                        <span id="audio-hint">Listen to unlock...</span>
+                    </div>
+                    <audio id="memory-audio"></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. FINAL SCENE -->
+    <section id="final-scene" class="scene">
+        <div class="final-wrap">
+            <p id="final-lead-in" class="serif hidden">Every memory led me here.</p>
+            <h1 id="valentine-question" class="serif"></h1>
+            <div id="decision-buttons" class="hidden">
+                <button id="yes-btn" class="glow-button">Yes</button>
+                <button id="no-btn" class="outline-button">No</button>
+            </div>
+        </div>
+        <div id="bloom-container"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
